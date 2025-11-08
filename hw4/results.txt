@@ -1,0 +1,136 @@
+================================================================================
+EXPLANATION METHODS FOR RESNET-18 ON IMAGENET
+================================================================================
+
+================================================================================
+Image: mountain_bike.JPEG
+================================================================================
+
+Top-5 Predictions:
+  1. mountain_bike: 0.963
+  2. unicycle: 0.017
+  3. bicycle-built-for-two: 0.010
+  4. crash_helmet: 0.006
+  5. moped: 0.002
+
+Generating explanations...
+
+Method Correlation:
+  Kendall-Tau: -0.845
+  Spearman: -0.282
+
+Analysis:
+  Confidence: 96.3% (High)
+  SmoothGrad: Focused attention
+  LIME: Top 5 superpixels = 10.9% of importance
+  Agreement: Weak
+  Saved: explanations_mountain_bike.png
+
+================================================================================
+Image: mousetrap.JPEG
+================================================================================
+
+Top-5 Predictions:
+  1. drumstick: 0.130
+  2. quill: 0.107
+  3. banjo: 0.073
+  4. acoustic_guitar: 0.062
+  5. revolver: 0.043
+
+Generating explanations...
+
+Method Correlation:
+  Kendall-Tau: -0.750
+  Spearman: 0.244
+
+Analysis:
+  Confidence: 13.0% (Low)
+  SmoothGrad: Focused attention
+  LIME: Top 5 superpixels = 10.6% of importance
+  Agreement: Weak
+  Saved: explanations_mousetrap.png
+
+================================================================================
+Image: paintbrush.JPEG
+================================================================================
+
+Top-5 Predictions:
+  1. rule: 0.237
+  2. slide_rule: 0.216
+  3. freight_car: 0.211
+  4. measuring_cup: 0.194
+  5. beaker: 0.027
+
+Generating explanations...
+
+Method Correlation:
+  Kendall-Tau: -0.369
+  Spearman: 0.373
+
+Analysis:
+  Confidence: 23.7% (Low)
+  SmoothGrad: Focused attention
+  LIME: Top 5 superpixels = 11.6% of importance
+  Agreement: Weak
+  Saved: explanations_paintbrush.png
+
+================================================================================
+Image: peacock.JPEG
+================================================================================
+
+Top-5 Predictions:
+  1. peacock: 0.990
+  2. fountain: 0.003
+  3. sea_urchin: 0.002
+  4. vault: 0.002
+  5. sea_anemone: 0.001
+
+Generating explanations...
+
+Method Correlation:
+  Kendall-Tau: -0.609
+  Spearman: -0.117
+
+Analysis:
+  Confidence: 99.0% (High)
+  SmoothGrad: Focused attention
+  LIME: Top 5 superpixels = 10.9% of importance
+  Agreement: Weak
+  Saved: explanations_peacock.png
+
+================================================================================
+Image: piggy_bank.JPEG
+================================================================================
+
+Top-5 Predictions:
+  1. pillow: 0.341
+  2. pitcher: 0.112
+  3. vase: 0.107
+  4. saltshaker: 0.054
+  5. Granny_Smith: 0.050
+
+Generating explanations...
+
+Method Correlation:
+  Kendall-Tau: -0.554
+  Spearman: -0.146
+
+Analysis:
+  Confidence: 34.1% (Low)
+  SmoothGrad: Focused attention
+  LIME: Top 5 superpixels = 11.1% of importance
+  Agreement: Weak
+  Saved: explanations_piggy_bank.png
+
+================================================================================
+SUMMARY
+================================================================================
+Processed 5 images
+Average Kendall-Tau: -0.625 ± 0.164
+Average Spearman: 0.014 ± 0.250
+
+KEY INSIGHTS:
+- SmoothGrad: Pixel-level gradients, captures fine details
+- LIME: Region-level importance, more human-interpretable
+- Positive correlation: Both identify similar important areas
+- Use SmoothGrad for detailed analysis, LIME for communication
